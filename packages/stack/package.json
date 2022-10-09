@@ -1,0 +1,16 @@
+{
+  "name": "dori.stack",
+  "version": "0.2.0",
+  "description": "stack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dori",
+    "data-structure",
+    "stack"
+  ],
+  "author": "sun_day500@163.com",
+  "license": "ISC"
+}
