@@ -1,13 +1,13 @@
 {
-  "name": "dori.stack",
+  "name": "dori.queue",
   "version": "0.1.0",
-  "description": "stack",
+  "description": "queue",
   "author": "sun0day",
   "license": "ISC",
   "keywords": [
     "dori",
     "data-structure",
-    "stack"
+    "queue"
   ],
   "exports": {
     ".": {
