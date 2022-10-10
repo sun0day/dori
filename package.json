@@ -11,13 +11,13 @@
   ],
   "main": "index.js",
   "scripts": {
+    "build:all": "pnpm -r --filter=\"dori.*\" run build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "lint:fix": "eslint . --fix",
     "prepare": "husky install",
+    "prepublishOnly": "node scripts/prerelease.js",
     "test": "vitest",
-    "test:cov": "vitest run --coverage",
-    "build:all": "pnpm -r --filter=\"dori.*\" run build",
-    "prepublishOnly": "pnpm build:all"
+    "test:cov": "vitest run --coverage"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
