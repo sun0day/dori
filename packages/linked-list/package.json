@@ -1,13 +1,13 @@
 {
-  "name": "dori.queue",
+  "name": "dori.linkedlist",
   "version": "0.1.0",
-  "description": "queue",
+  "description": "linkedlist",
   "author": "sun0day",
   "license": "ISC",
   "keywords": [
     "dori",
     "data-structure",
-    "queue"
+    "linkedlist"
   ],
   "exports": {
     ".": {
@@ -17,6 +17,7 @@
     },
     "./*": "./*"
   },
+  "files": ["dist"],
   "scripts": {
     "build": "tsup --config ../../tsup.config.ts"
   }
