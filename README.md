@@ -4,7 +4,7 @@
 
 <img src="https://img.shields.io/npm/v/dori">
 <img src="https://img.shields.io/npm/dw/dori" >
-<img src="https://img.shields.io/bundlephobia/minzip/dori?label=bundle">
+<img src="https://img.shields.io/bundlephobia/minzip/dori?label=minzip">
 <img src="https://img.shields.io/github/commit-activity/w/sun0day/dori" >
 <img src="https://img.shields.io/github/search/sun0day/dori/goto?color=%23812461">
 <br>
