@@ -16,3 +16,7 @@ A data structure implementation lib in Typescript.
 - no third-party dependencies
 - compatible with `cjs` & `esm`
 - run in `node` & `browser`
+
+## Data Structure
+
+- [LinkedList](/packages/linked-list/)
