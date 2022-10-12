@@ -175,6 +175,26 @@ export class LinkedList<T> {
   }
 
   /**
+   * reverse a linked list, T = O(n)
+   *
+   * @returns {LinkedList<T>} - linked list after reverse
+   */
+  reverse() {
+    let prev = null; let cur = this._head; let next = null
+
+    while (cur) {
+      next = cur.next
+      cur.next = prev
+
+      prev = cur
+      cur = next
+    }
+
+    this._tail = this._head
+    this._head = prev
+  }
+
+  /**
    * get head node
    *
    * @returns {LinkedListNode<T>}

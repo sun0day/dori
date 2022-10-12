@@ -113,4 +113,20 @@ describe('LinkedList', () => {
     expect(list.size()).toBe(0)
     expect(list.toArray()).toEqual([])
   })
+
+  it('should reverse', () => {
+    let list = new LinkedList()
+    list.reverse()
+    expect(list.toArray()).toEqual([])
+
+    list = LinkedList.from([1])
+    list.reverse()
+    expect(list.toArray()).toEqual([1])
+    expect(list.tail().value).toBe(1)
+
+    list = LinkedList.from([1, 2, 3])
+    list.reverse()
+    expect(list.toArray()).toEqual([3, 2, 1])
+    expect(list.tail().value).toBe(1)
+  })
 })
