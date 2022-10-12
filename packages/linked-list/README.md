@@ -1,10 +1,6 @@
 # dori.linkedlist
 
-<img src="https://img.shields.io/npm/v/dori.linkedlist">
-<img src="https://img.shields.io/npm/dw/dori.linkedlist" >
-<img src="https://img.shields.io/bundlephobia/minzip/dori.linkedlist?label=bundle">
-
-<br>
+<img src="https://img.shields.io/npm/v/dori.linkedlist"> <img src="https://img.shields.io/npm/dw/dori.linkedlist" > <img src="https://img.shields.io/bundlephobia/minzip/dori.linkedlist?label=bundle">
 
 A linked list is a linear collection of data elements, in which linear order is not given by their physical placement in memory. Instead, each element points to the next.
 
@@ -17,16 +13,93 @@ $ npm i dori.linkedlist
 
 ## Usage
 
+### create new `LinkedListNode`
+
+```typescript
+import { LinkedListNode } from 'dori.linkedlist'
+
+const node1 = new LinkedListNode(1) // {value: 1, next: null}
+const node2 = new LinkedListNode(2, node1) // {value: 2, next: node1}
+```
+
+### create new `LinkedList`
+
+```typescript
+import { LinkedList } from 'dori.linkedlist'
+
+const list1 = new LinkedList() // empty LinkedList
+const list2 = LinkedList.from([1,2,3]) // create from an array, LinkedListNode(1) -> LinkedListNode(2) -> LinkedListNode(3)
+```
+
+### find `LinkedListNode` which matches `compare` callback
+
+```typescript
+import { LinkedList } from 'dori.linkedlist'
+
+const list = LinkedList.from([1,2,3]) // create from an array, LinkedListNode(1) -> LinkedListNode(2) -> LinkedListNode(3)
+list.find(node => node.value === 1) // return LinkedListNode(1)
+list.find(node => node.value === 4) // return null
+```
+
+### prepend new value or `LinkedListNode` before `LinkedList.head`
+
 ```typescript
 import { LinkedList, LinkedListNode } from 'dori.linkedlist'
 
-// create a LinkedList
+const list = new LinkedList<number>()
+
+list.prepend(1) // LinkedListNode(1)
+list.prepend(new LinkedListNode(2)) // LinkedListNode(2) -> LinkedListNode(1) 
+list.prepend(new LinkedListNode(3)) // LinkedListNode(3) ->  LinkedListNode(2) -> LinkedListNode(1) 
+list.toArray() // [3,2,1]
+```
+
+### append new value or `LinkedListNode` after `LinkedList.tail`
+
+```typescript
+import { LinkedList, LinkedListNode } from 'dori.linkedlist'
+
 const list = new LinkedList<number>()
 
 list.append(1) // LinkedListNode(1)
 list.append(new LinkedListNode(2)) // LinkedListNode(1) -> LinkedListNode(2)
 list.append(new LinkedListNode(3)) // LinkedListNode(1) -> LinkedListNode(2) -> LinkedListNode(3)
 list.toArray() // [1, 2, 3]
+```
+
+### insert new value or `LinkedListNode` before nth node
+
+```typescript
+import { LinkedList, LinkedListNode } from 'dori.linkedlist'
+
+const list = new LinkedList<number>()
+
+list.append(1) // LinkedListNode(1)
+list.append(new LinkedListNode(2)) // LinkedListNode(1) -> LinkedListNode(2)
+list.insert(new LinkedListNode(3), 1) // LinkedListNode(1) -> LinkedListNode(3) -> LinkedListNode(2)
+list.toArray() // [1, 3, 2]
+```
+
+### remove `LinkedListNode` which matches `compare` callback
+
+```typescript
+import { LinkedList } from 'dori.linkedlist'
+
+const list = LinkedList.from([1,2,3])
+
+list.remove(node => node.value === 2) // return LinkedListNode(2), list becomes into LinkedListNode(1) -> LinkedListNode(3)
+list.toArray() // [1,3]
+```
+
+### reverse `LinkedList`
+
+```typescript
+import { LinkedList } from 'dori.linkedlist'
+
+const list = LinkedList.from([1,2,3])
+
+list.reverse() // LinkedListNode(3) ->  LinkedListNode(2) -> LinkedListNode(1)
+list.toArray() // [3,2,1]
 ```
 
 ## API
