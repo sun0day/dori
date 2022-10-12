@@ -31,6 +31,20 @@ export class LinkedList<T> {
     return value instanceof LinkedListNode ? value : new LinkedListNode(value)
   }
 
+  /**
+   * create LinkedList from array, T = O(n)
+   *
+   * @template T
+   * @param {T[]} values - node value set
+   * @returns {LinkedList<T>}
+   */
+  static from<T>(values: T[]) {
+    const list = new LinkedList<T>()
+    values.forEach(value => list.append(value))
+
+    return list
+  }
+
   constructor() {
     this._head = null
     this._tail = null
@@ -101,6 +115,44 @@ export class LinkedList<T> {
     cur.next.next = next
 
     this._size++
+  }
+
+  /**
+   * remove node, T = O(n)
+   *
+   * @param {LinkedListNode<T>) => boolean} compare - node which matches `compare` will be removed
+   * @returns {LinkedListNode<T> | null} - return removed node, if node not exist, return null
+   */
+  remove(compare: (node: LinkedListNode<T>) => boolean) {
+    const shadowHead = new LinkedListNode(null, this._head)
+    let count = 0
+    let prev = shadowHead
+    let cur = prev
+
+    while (cur) {
+      // should ignore shadow head
+      if (count++ > 0 && compare(cur))
+        break
+
+      prev = cur
+      cur = cur.next
+    }
+
+    if (!cur)
+      return null
+
+    prev.next = cur.next
+    cur.next = null
+
+    if (cur === this._head)
+      this._head = prev.next
+
+    if (cur === this._tail)
+      this._tail = prev === shadowHead ? null : prev
+
+    this._size--
+
+    return cur
   }
 
   /**
