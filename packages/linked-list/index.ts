@@ -51,6 +51,25 @@ export class LinkedList<T> {
   }
 
   /**
+   * find node, T = O(n)
+   *
+   * @param {LinkedListNode<T>) => boolean} compare - find node which matches `compare`
+   * @returns {LinkedListNode<T> | null} - return founded node, if node not exist, return null
+   */
+  find(compare: (node: LinkedListNode<T>) => boolean) {
+    let cur = this._head
+
+    while (cur) {
+      if (compare(cur))
+        break
+
+      cur = cur.next
+    }
+
+    return cur
+  }
+
+  /**
    * insert a new node before linked list head node, T = O(1)
    *
    * @param {T | LinkedListNode<T>} value - LinkedListNode or other type value to prepend

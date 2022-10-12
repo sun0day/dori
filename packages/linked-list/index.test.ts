@@ -1,6 +1,13 @@
 import { LinkedList, LinkedListNode } from './index'
 
 describe('LinkedList', () => {
+  it('should find', () => {
+    const list = LinkedList.from([1, 2, 3])
+
+    expect(list.find(node => node.value === 2).value).toBe(2)
+    expect(list.find(node => node.value === 4)).toBeNull()
+  })
+
   it('should prepend', () => {
     const list = new LinkedList<number>()
     list.prepend(1)
