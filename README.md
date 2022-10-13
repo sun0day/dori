@@ -1,5 +1,7 @@
 <p align="center">
-<img width="402" alt="image" src="https://user-images.githubusercontent.com/102238922/194814999-549a9af3-a588-4e5b-8981-70147786ea9d.png">
+
+<img width="274" alt="image" src="https://user-images.githubusercontent.com/102238922/195491383-30d15e8c-1200-4999-bcc5-50fe5c965c77.png">
+
 <br>
 
 <img src="https://img.shields.io/npm/v/dori">
