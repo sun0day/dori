@@ -4,6 +4,7 @@
   "description": "linkedlist",
   "author": "sun0day",
   "license": "ISC",
+  "main": "./dist/index.cjs",
   "keywords": [
     "dori",
     "data-structure",
