@@ -1,6 +1,6 @@
 {
   "name": "dori.linkedlist",
-  "version": "0.0.0",
+  "version": "0.1.0-beta.0",
   "description": "linkedlist",
   "author": "sun0day",
   "license": "ISC",
@@ -26,7 +26,9 @@
     },
     "./*": "./*"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsup --config ../../tsup.config.ts"
   }

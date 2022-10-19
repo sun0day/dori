@@ -1,6 +1,6 @@
 {
   "name": "dori",
-  "version": "0.0.0",
+  "version": "0.1.0-beta.0",
   "description": "A data structure implementation lib in Typescript",
   "author": "sun0day",
   "license": "ISC",
