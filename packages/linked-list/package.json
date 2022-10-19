@@ -5,6 +5,14 @@
   "author": "sun0day",
   "license": "ISC",
   "main": "./dist/index.cjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sun0day/dori.git",
+    "directory": "packages/linked-list"
+  },
+  "bugs": {
+    "url": "https://github.com/sun0day/dori/issues"
+  },
   "keywords": [
     "dori",
     "data-structure",
