@@ -1,3 +1,18 @@
+# [0.1.0-beta.1](https://github.com/sun0day/dori/compare/v0.1.0-beta.0...v0.1.0-beta.1) (2022-10-21)
+
+
+### Bug Fixes
+
+* **LinkedList:** strict type ([147cee7](https://github.com/sun0day/dori/commit/147cee7bdffdce052b19df2aec0e7afb10439d0d))
+
+
+### Features
+
+* **LinkedList:** support remove node via index ([7ad23b1](https://github.com/sun0day/dori/commit/7ad23b130cdc459267170b981be45cc6410e6f1d))
+* **Stack:** stack `size` `empty` `push` `pop` `peek` `toArray` ([c3b1ea3](https://github.com/sun0day/dori/commit/c3b1ea3ed06743ae36db0d1185f1459dfd427828))
+
+
+
 # 0.1.0-beta.0 (2022-10-19)
 
 
