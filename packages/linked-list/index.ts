@@ -110,22 +110,22 @@ export class LinkedList<T> {
   /**
    * insert a new node before nth node, T = O(n)
    *
-   * @param {T | LinkedListNode<T>} value - LinkedListNode or other type value to insert
    * @param {number} index - index to insert \
    * if index <= 0, value will be inserted before head node \
    * if index >= list size, value will be insert after tail node
+   * @param {T | LinkedListNode<T>} value - LinkedListNode or other type value to insert
    */
-  insert(value: T | LinkedListNode<T>, index: number) {
+  insert(index: number, value: T | LinkedListNode<T>) {
     if (index <= 0)
       return this.prepend(value)
 
     if (index >= this._size)
       return this.append(value)
 
-    let count = 0; let cur = this._head
+    let count = 0; let cur = this._head!
 
-    while (count < index - 1) {
-      cur = cur.next
+    while (cur && count < index - 1) {
+      cur = cur.next!
       count++
     }
 
@@ -146,11 +146,11 @@ export class LinkedList<T> {
     const shadowHead = new LinkedListNode(null, this._head)
     let index = -1
     let prev = shadowHead
-    let cur = prev
+    let cur: LinkedListNode<T | null> | null = prev
 
     while (cur) {
       // should ignore shadow head
-      if (index > -1 && compare(cur, index))
+      if (index > -1 && compare(cur as LinkedListNode<T>, index))
         break
 
       prev = cur
@@ -165,14 +165,14 @@ export class LinkedList<T> {
     cur.next = null
 
     if (cur === this._head)
-      this._head = prev.next
+      this._head = prev.next as LinkedListNode<T>
 
     if (cur === this._tail)
-      this._tail = prev === shadowHead ? null : prev
+      this._tail = prev === shadowHead ? null : prev as LinkedListNode<T>
 
     this._size--
 
-    return cur
+    return cur as LinkedListNode<T>
   }
 
   /**

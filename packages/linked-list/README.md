@@ -144,7 +144,7 @@ declare class LinkedList<T> {
      * @param {LinkedListNode<T>) => boolean} compare - find node which matches `compare`
      * @returns {LinkedListNode<T> | null} - return founded node, if node not exist, return null
      */
-    find(compare: (node: LinkedListNode<T>) => boolean): LinkedListNode<T>;
+    find(compare: (node: LinkedListNode<T>) => boolean): LinkedListNode<T> | null;
     /**
      * insert a new node before linked list head node, T = O(1)
      *
@@ -160,19 +160,19 @@ declare class LinkedList<T> {
     /**
      * insert a new node before nth node, T = O(n)
      *
-     * @param {T | LinkedListNode<T>} value - LinkedListNode or other type value to insert
      * @param {number} index - index to insert \
      * if index <= 0, value will be inserted before head node \
      * if index >= list size, value will be insert after tail node
+     * @param {T | LinkedListNode<T>} value - LinkedListNode or other type value to insert
      */
-    insert(value: T | LinkedListNode<T>, index: number): void;
+    insert(index: number, value: T | LinkedListNode<T>): void;
     /**
      * remove node, T = O(n)
      *
      * @param {(node: LinkedListNode<T>, index: number) => boolean} compare - node which matches `compare` will be removed
      * @returns {LinkedListNode<T> | null} - return removed node, if node not exist, return null
      */
-    remove(compare: (node: LinkedListNode<T>, index: number) => boolean): LinkedListNode<T>;
+    remove(compare: (node: LinkedListNode<T>, index: number) => boolean): LinkedListNode<T> | null;
     /**
      * reverse a linked list, T = O(n)
      *
@@ -184,13 +184,13 @@ declare class LinkedList<T> {
      *
      * @returns {LinkedListNode<T>}
      */
-    head(): LinkedListNode<T>;
+    head(): LinkedListNode<T> | null;
     /**
      * get tail node
      *
      * @returns {LinkedListNode<T>}
      */
-    tail(): LinkedListNode<T>;
+    tail(): LinkedListNode<T> | null;
     /**
      * get list size
      *
