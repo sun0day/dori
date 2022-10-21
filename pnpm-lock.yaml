@@ -37,6 +37,12 @@ importers:
   packages/linked-list:
     specifiers: {}
 
+  packages/stack:
+    specifiers:
+      dori.linkedlist: workspace:*
+    dependencies:
+      dori.linkedlist: link:../linked-list
+
 packages:
 
   /@antfu/eslint-config-basic/0.27.0_cfd7h3iktziq6hcwahu2qxhjhy:
