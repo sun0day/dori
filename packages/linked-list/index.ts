@@ -139,22 +139,23 @@ export class LinkedList<T> {
   /**
    * remove node, T = O(n)
    *
-   * @param {LinkedListNode<T>) => boolean} compare - node which matches `compare` will be removed
+   * @param {(node: LinkedListNode<T>, index: number) => boolean} compare - node which matches `compare` will be removed
    * @returns {LinkedListNode<T> | null} - return removed node, if node not exist, return null
    */
-  remove(compare: (node: LinkedListNode<T>) => boolean) {
+  remove(compare: (node: LinkedListNode<T>, index: number) => boolean) {
     const shadowHead = new LinkedListNode(null, this._head)
-    let count = 0
+    let index = -1
     let prev = shadowHead
     let cur = prev
 
     while (cur) {
       // should ignore shadow head
-      if (count++ > 0 && compare(cur))
+      if (index > -1 && compare(cur, index))
         break
 
       prev = cur
       cur = cur.next
+      index++
     }
 
     if (!cur)

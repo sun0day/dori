@@ -90,7 +90,7 @@ describe('LinkedList', () => {
     expect(list.size()).toBe(2)
     expect(list.toArray()).toEqual([2, 4])
 
-    removed = list.remove(node => node.value === 4)
+    removed = list.remove((node, index) => index === 1)
     expect(removed.value).toBe(4)
     expect(removed.next).toBe(null)
     expect(list.head().value).toBe(2)
@@ -98,7 +98,7 @@ describe('LinkedList', () => {
     expect(list.size()).toBe(1)
     expect(list.toArray()).toEqual([2])
 
-    removed = list.remove(node => node.value === 2)
+    removed = list.remove((node, index) => index === 0)
     expect(removed.value).toBe(2)
     expect(removed.next).toBe(null)
     expect(list.head()).toBeNull()

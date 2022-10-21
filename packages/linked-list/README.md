@@ -169,10 +169,10 @@ declare class LinkedList<T> {
     /**
      * remove node, T = O(n)
      *
-     * @param {LinkedListNode<T>) => boolean} compare - node which matches `compare` will be removed
+     * @param {(node: LinkedListNode<T>, index: number) => boolean} compare - node which matches `compare` will be removed
      * @returns {LinkedListNode<T> | null} - return removed node, if node not exist, return null
      */
-    remove(compare: (node: LinkedListNode<T>) => boolean): LinkedListNode<T>;
+    remove(compare: (node: LinkedListNode<T>, index: number) => boolean): LinkedListNode<T>;
     /**
      * reverse a linked list, T = O(n)
      *
