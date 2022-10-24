@@ -5,13 +5,14 @@
 <br>
 <br>
 A data structure implementation lib in Typescript
+<br>
+<br>
+<img src="https://img.shields.io/badge/coverage-100%25-yellow">
+<img src="https://img.shields.io/badge/dependencies-0-blue">
+<img src="https://img.shields.io/badge/module-cjs+esm-orange">
+<img src="https://img.shields.io/badge/target-node+browser-pink">
 </p>
 
-- fully support Typescript
-- 99%+ unit test coverage
-- no third-party dependencies
-- compatible with `cjs` & `esm`
-- run in `node` & `browser`
 
 ## Data Structure
 
