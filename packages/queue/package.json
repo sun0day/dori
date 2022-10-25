@@ -1,0 +1,39 @@
+{
+  "name": "dori.queue",
+  "version": "0.1.0-beta.1",
+  "description": "queue",
+  "author": "sun0day",
+  "license": "ISC",
+  "main": "./dist/index.cjs",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sun0day/dori.git",
+    "directory": "packages/queue"
+  },
+  "bugs": {
+    "url": "https://github.com/sun0day/dori/issues"
+  },
+  "keywords": [
+    "dori",
+    "data-structure",
+    "queue"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./*": "./*"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup --config ../../tsup.config.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "dori.linkedlist": "workspace:*"
+  }
+}

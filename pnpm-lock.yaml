@@ -37,6 +37,12 @@ importers:
   packages/linked-list:
     specifiers: {}
 
+  packages/queue:
+    specifiers:
+      dori.linkedlist: workspace:*
+    dependencies:
+      dori.linkedlist: link:../linked-list
+
   packages/stack:
     specifiers:
       dori.linkedlist: workspace:*

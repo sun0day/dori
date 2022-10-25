@@ -19,3 +19,5 @@ A data structure implementation lib in Typescript
 > **[LinkedList](/packages/linked-list/)**: A linked list is a linear collection of data elements, in which linear order is not given by their physical placement in memory. Instead, each element points to the next.
 
 > **[Stack](/packages/stack)**: A stack is an abstract data type that serves as a collection of elements in last in first out order.
+
+> **[Queue](/packages/queue)**: A queue is an abstract data type that serves as a collection of elements in first in first out order.
