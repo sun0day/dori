@@ -1,3 +1,12 @@
+# [0.1.0-beta.2](https://github.com/sun0day/dori/compare/v0.1.0-beta.1...v0.1.0-beta.2) (2022-10-25)
+
+
+### Features
+
+* **Queue:** add `size` `empty` `toArray` `enqueue` `dequeue` ([d9c4a54](https://github.com/sun0day/dori/commit/d9c4a5428abb884f6453a0a765b96825ef99645d))
+
+
+
 # [0.1.0-beta.1](https://github.com/sun0day/dori/compare/v0.1.0-beta.0...v0.1.0-beta.1) (2022-10-21)
 
 
